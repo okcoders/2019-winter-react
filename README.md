@@ -53,13 +53,13 @@ Intro to React
 
 ### Class 2
 
-Lifting state
-
 Class based component lifecycle
 
 * componentDidMount
 * componentWillUnmount
 * componentDidUpdate
+
+Lifting state
 
 React Hooks!
 
