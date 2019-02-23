@@ -28,6 +28,15 @@ For our purposes, we need to know about
 
 ### Why React?
 
+* Small learning curve
+* We can encapsulate logic, state, and UI in highly composable and reusable components
+* Almost everything we do is just JavaScript
+* Kitch Sink™ not included
+* Can be used for more than just the web
+  * iOS and Android with [React Native](https://facebook.github.io/react-native/)
+  * The command line using [Ink](https://github.com/vadimdemedes/ink)
+* Has the most job postings mentioning it of any of the major frameworks
+
 ### Key topics we'll be covering
 
 * [create-react-app](https://github.com/facebook/create-react-app)
