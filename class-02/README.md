@@ -5,16 +5,16 @@
 How do we handle component state in React?
 
 * constructor
-* this.state
-* this.setState
+* [this.state](https://reactjs.org/docs/state-and-lifecycle.html)
+* [this.setState](https://reactjs.org/docs/state-and-lifecycle.html)
 
 ## Lifecycle Methods
 
 Methods for hooking into different events happening with your component
 
-* componentDidMount
-* componentWillUnmount
-* componentDidUpdate
+* [componentDidMount](https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class)
+* [componentWillUnmount](https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class)
+* [componentDidUpdate](https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class)
 * Legacy methods - avoid these in your code, you don't need them anymore
     * componentWillMount
     * componentWillUpdate
@@ -25,10 +25,8 @@ Methods for hooking into different events happening with your component
 Or, the new way to do things
 
 * no more class components, only functions!
-* useState
-* useEffect
-
-if we have time, otherwise we'll go over these next week
-
-* useRef
-* useReducer
+* [useState](https://reactjs.org/docs/hooks-state.html)
+* [useEffect](https://reactjs.org/docs/hooks-effect.html)
+* [custom hooks](https://reactjs.org/docs/hooks-custom.html)
+* [useRef](https://reactjs.org/docs/hooks-reference.html#useref)
+* [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
