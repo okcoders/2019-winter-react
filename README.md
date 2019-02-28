@@ -65,6 +65,8 @@ React Hooks!
 
 * useState
 * useEffect
+* useRef
+* useReducer
 
 #### Between Class
 
