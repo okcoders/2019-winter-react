@@ -10,7 +10,12 @@
 * class names
 * [css-modules](https://github.com/css-modules/css-modules)
 * [styled-components](https://www.styled-components.com/)
+    * Tagged template literals
+    * Basics
+    * Passing Props
+    * Extending styles
     * Theming
+    * Global Styles
 
 ## Component Libraries
 
