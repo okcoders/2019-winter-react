@@ -1,57 +1,42 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import { Input, List } from 'antd';
+import styled from 'styled-components';
 
-
-const marginReset = css`
-  margin: 0;
-  padding: 0;
+const TodoInput = styled(Input)`
+  font-size: 2em;
+  padding: 32px;
 `;
 
-const Heading = styled.h1`
-  font-size: 1.5em;
-  color: ${(props) => props.theme.headingBlack};
-  ${marginReset}
-  padding-bottom: .5em;
-`;
-
-const TodoInput = styled.input`
-  padding: 6px;
-  border: 1px solid ${(props) => props.theme.bodyBlack};
+const Card = styled.div`
+  padding: 12px;
   border-radius: 3px;
-  color: ${(props) => props.theme.headingBlack};
-  &:focus {
-    outline: none;
-    border-color: red;
-  }
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 `;
 
-const TodosList = styled.ul`
-  ${marginReset}
-  list-style: none;
-`;
-
-const TodosListItem = styled.li`
-  ${marginReset}
-  padding: 6px 6px 12px;
-  border-bottom: 1px solid ${(props) => props.theme.bodyBlack};
-  color: ${(props) => props.theme.headingBlack};
-`;
+const FlexCard = styled(Card)`
+  display: flex;
+`
 
 function TodoList(props) {
 
+  const data = [
+    'Learn React',
+    'Build a thing',
+    '???',
+    'Profit'
+  ]
+
   return (
-    <>
-      <Heading>To Dos</Heading>
+    <FlexCard>
+      <h1>To Dos</h1>
       <form>
         <TodoInput type="text" />
       </form>
-      <TodosList>
-        <TodosListItem>Learn React</TodosListItem>
-        <TodosListItem>Build a thing</TodosListItem>
-        <TodosListItem>???</TodosListItem>
-        <TodosListItem>Profit</TodosListItem>
-      </TodosList>
-    </>
+      <List
+        dataSource={data}
+        renderItem={item => <List.Item>{item}</List.Item>}
+      />
+    </FlexCard>
   )
 }
 

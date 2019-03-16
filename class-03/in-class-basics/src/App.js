@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import "antd/dist/antd.css";
 
 import TodoList from './TodoList';
 
 import { ThemeProvider } from 'styled-components';
-import LocationProvider from './LocationProvider';
+
 
 const theme = {
   headingBlack: '#222',
