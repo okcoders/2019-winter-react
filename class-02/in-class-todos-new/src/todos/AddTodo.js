@@ -7,7 +7,7 @@ class AddTodo extends React.Component {
 
 		this.state = {
 			addingToDo: false,
-			name: ''
+			title: ''
 		}
 	}
 
@@ -17,14 +17,14 @@ class AddTodo extends React.Component {
 		})
 	}
 
-	nameChange = (event) => {
-		this.setState({name: event.target.value})
+	titleChange = (event) => {
+		this.setState({title: event.target.value})
 	}
 
 	addTodo = () => {
 		console.log("add to do")
-		this.props.addTodoItem(this.state.name)
-		this.setState({name: '', addingToDo: false})
+		this.props.addTodoItem(this.state.title)
+		this.setState({title: '', addingToDo: false})
 	}
 
 	render() {
@@ -32,9 +32,9 @@ class AddTodo extends React.Component {
 			return (
 				<>
 					<span>
-						Name: 
+						Title: 
 					</span> 
-					<input value={this.state.name} onChange={this.nameChange} type="text" />
+					<input value={this.state.title} onChange={this.titleChange} type="text" />
 					<button onClick={this.addTodo}>Add Todo</button>
 				</>
 			)
