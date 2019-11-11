@@ -1,15 +1,25 @@
-import React from 'react'
+import React from "react";
+import {List, ListItem, ListItemText } from "@material-ui/core";
 
-function TodoList(props) {
-	const todosToRender = props.items.map((todo, i) => {
-		return <li key={i}>{todo.title}</li>
-	})
-
-	return (
-		<ol>
-			{todosToRender}
-		</ol>
-	)
+const TodoList = (props) => {
+		return (
+			<List>
+				{props.items.map((todo, i) => {
+					let button;
+					if(props.showButton) {
+						button = props.buttonRender(i);
+					}
+					return (
+						<div>
+							{<ListItem key={i}>
+							<ListItemText>{todo.title} </ListItemText>
+							{button ? button : null}</ListItem>}
+						</div>
+						
+					)
+				})}
+			</List>
+		);
 }
 
 export default TodoList
