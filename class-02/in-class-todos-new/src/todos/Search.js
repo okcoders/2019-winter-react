@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button, TextField } from '@material-ui/core'
 
 class Search extends React.Component {
 	constructor(props) {
@@ -20,8 +21,8 @@ class Search extends React.Component {
 				<span>
 					Search Term
 				</span> 
-				<input value={this.state.searchTerm} onChange={this.searchChange} type="text" />
-				<button onClick={() => this.props.updateFilter(this.state.searchTerm)}>Search</button>
+				<TextField variant="outlined" value={this.state.searchTerm} onChange={this.searchChange} type="text" />
+				<Button color="primary" variant="contained" onClick={() => this.props.updateFilter(this.state.searchTerm)}>Search</Button>
 			</div>
 		)
 	}

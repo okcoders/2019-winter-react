@@ -1,5 +1,7 @@
 
 import React from 'react'
+import { Button, TextField } from '@material-ui/core';
+import OutlinedButton from '../components/outlined-button';
 
 class AddTodo extends React.Component {
 	constructor(props) {
@@ -34,14 +36,15 @@ class AddTodo extends React.Component {
 					<span>
 						Title: 
 					</span> 
-					<input value={this.state.title} onChange={this.titleChange} type="text" />
-					<button onClick={this.addTodo}>Add Todo</button>
+					<TextField variant="outlined" value={this.state.title} onChange={this.titleChange} type="text" />
+					<OutlinedButton color="secondary" 
+					onClick={this.addTodo}>Add Todo</OutlinedButton>
 				</>
 			)
 		} else {
 			return (
 				<>
-					<button onClick={this.newTodo}>New Todo +</button>
+					<OutlinedButton color="secondary" onClick={this.newTodo}>New Todo +</OutlinedButton>
 				</>
 			)
 		}
